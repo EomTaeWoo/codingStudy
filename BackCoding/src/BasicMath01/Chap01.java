@@ -17,7 +17,7 @@ public class Chap01 {
 		}else {
 			System.out.println(a/(c-b)+1);
 		}
-		
+		System.out.println("Å×½ºÆ®");
 	}
 
 }
