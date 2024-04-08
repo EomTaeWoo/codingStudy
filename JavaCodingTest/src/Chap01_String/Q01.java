@@ -20,7 +20,7 @@ public class Q01 {
 	public int solution(String str, char t) {
 		int answer = 0;
 		str = str.toUpperCase();
-		t = Character.toUpperCase(t);	// char변수라서 Character함수를 써야함
+		t = Character.toUpperCase(t);	// char변수라서 Character클래스를 써야함
 		
 		/*
 		for(int i = 0; i < str.length(); i ++) {
