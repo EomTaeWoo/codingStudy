@@ -12,6 +12,7 @@ public class Q02 {
 		
 		for(char x : str.toCharArray()) {
 			if(x == ')') {
+				// stack.pop()은 꺼낸값을 리턴합니다.
 				while(stack.pop() != '(') {
 					
 				}
@@ -22,8 +23,6 @@ public class Q02 {
 		for(int i = 0; i < stack.size(); i ++) {
 			answer += stack.get(i);
 		}
-		
-		
 		return answer;
 	}
 
