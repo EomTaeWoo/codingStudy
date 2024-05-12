@@ -8,23 +8,24 @@ public class Q04 {
 		int answer = 0;
 		Stack<Integer> stack = new Stack<>();
 		
-		for(char x : str.toCharArray()){
+		for(char x : str.toCharArray()) {
 			if(Character.isDigit(x)) {
-				stack.push(x-48);
+				stack.push(x - 48);
 			} else {
-				int rt = stack.pop();
 				int lt = stack.pop();
+				int rt = stack.pop();
 				if(x == '+') {
-					stack.push(lt + rt);
-				} else if (x == '-'){
-					stack.push(lt - rt);
-				} else if (x == '*'){
-					stack.push(lt * rt);
-				} else if (x == '/'){
-					stack.push(lt / rt);
+					stack.push(rt + lt);
+				} else if(x == '-') {
+					stack.push(rt - lt);
+				} else if(x == '*') {
+					stack.push(rt * lt);
+				} else if(x == '/') {
+					stack.push(rt / lt);
 				}
 			}
 		}
+		
 		answer = stack.get(0);
 		
 		return answer;
